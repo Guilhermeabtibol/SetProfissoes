@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    --cor1: #a6140c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f8f9fa;
+  }
+/* Navbar transparente */
+.custom-navbar {
+    background-color: transparent !important;
+    position: absolute; /* Fica dentro da hero */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+  
+  /* Navbar ao rolar (background color preenchido) */
+.custom-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo opaco ao rolar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+  
+  /* Estilo dos links da navbar */
+.custom-navbar .nav-link {
+    font-size: 1rem; /* Tamanho da fonte */
+    color: var(--cor1, white); /* Cor padrão do texto */
+    margin: 0 15px; /* Espaçamento entre os links */
+    text-transform: uppercase; /* Deixa o texto em maiúsculo */
+    padding: 10px; /* Espaçamento interno do link */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+  
+  /* Efeito ao passar o mouse (hover) */
+.custom-navbar .nav-link:hover {
+    color: black; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do link */
+}
+  
+  /* Link ativo */
+.custom-navbar .nav-link.active {
+    color: #f0ad4e; /* Cor do link ativo */
+    font-weight: bold; /* Negrito para link ativo */
+}
+  
+  /* Menu dropdown */
+.custom-navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo do menu */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Transição de exibição */
+}
+  
+  /* Itens do dropdown */
+.custom-navbar .dropdown-item {
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suavidade */
+}
+  
+  /* Efeito ao passar o mouse nos itens do dropdown */
+.custom-navbar .dropdown-item:hover {
+    background-color: black; /* Cor de fundo ao passar o mouse */
+    color: black; /* Texto com contraste */
+}
+  
+  /* Responsividade: Estilo para telas pequenas */
+@media (max-width: 768px) {
+    .custom-navbar .nav-link {
+      font-size: 0.9rem; /* Diminui o tamanho da fonte */
+      margin: 0 10px;
+    }
+}
+  
+.logo-nav {
+    width: 40px;
+    height: 40px;
+    transition: transform 0,3s ease, opacity 0.3s ease;
+    display: block;
+    margin: 0;
+}
+  
+.navbar-brand {
+    display: flex;
+    align-items: center;
+
+}
+  
+.logo-nav:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.hero {
+    height: 80vh;
+    background: url(/assets/biblioteca2.jpg) no-repeat center center/cover;
+    color: white;
+
+}
+.btn-custom {
+    background-color: #a6140c !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+}
+.btn-custom:hover {
+    background-color: #ffffff;
+    color: black !important;
+}
+
+/* Estilo para a seção "Sobre Nós" */
+.sobre-nos {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+  
+  /* Personalização de texto */
+.sobre-nos h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: 2px;
+}
+  
+  /* Efeito de imagem */
+.sobre-nos img {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Estilos para o texto */
+.sobre-nos p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+  
+/* Estilos gerais para a seção "Nosso Método de Aprendizado" */
+.metodo {
+    background-color: #f9f9f9; /* Cor de fundo suave para destacar a seção */
+    padding: 60px 0; /* Espaçamento superior e inferior */
+  }
+  
+  .metodo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Cor do título */
+    margin-bottom: 20px;
+  }
+  
+  .metodo p {
+    font-size: 1.1rem;
+    color: #666; /* Cor do texto */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .metodo .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
+    transition: transform 0.3s ease-in-out; /* Efeito de transição */
+  }
+  
+  .metodo .card:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+  }
+  
+  .metodo .card-body {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .metodo .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .metodo .card-text {
+    font-size: 1rem;
+    color: #555; /* Cor do texto nos cards */
+    line-height: 1.5;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .metodo h2 {
+      font-size: 2rem; /* Reduz o tamanho do título em telas pequenas */
+    }
+  
+    .metodo p {
+      font-size: 1rem; /* Ajusta o tamanho do texto */
+      margin: 0 15px 30px; /* Ajusta o espaço nas laterais */
+    }
+  
+    .metodo .card {
+      margin-bottom: 20px; /* Adiciona um espaçamento entre os cards em telas menores */
+    }
+  }
+  
+  /* Cursos Section */
+.cursos {
+    padding: 50px 0;
+    background-color: var(--cor1) !important;
+}
+  
+.cursos h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+  
+.cursos .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.cursos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+  
+.cursos .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.cursos .card-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+  
+.cursos .card-text {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cursos .btn-primary {
+    background-color: var(--cor1);
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+  
+.cursos .btn-primary:hover {
+    background-color: var(--cor1);
+    border-color: #0056b3;
+}
+
+/* Seção do formulário */
+.formulario-inscricao {
+    background-color: #f4f4f4; /* Cor de fundo */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .formulario-inscricao h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .formulario-inscricao .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .formulario-inscricao .form-control, 
+  .formulario-inscricao .form-select {
+    border-radius: 10px; /* Bordas arredondadas nos inputs */
+    border: 1px solid #ccc; /* Cor da borda */
+    padding: 12px 20px;
+  }
+  
+  .formulario-inscricao .form-control:focus, 
+  .formulario-inscricao .form-select:focus {
+    border-color: var(--cor1); /* Cor da borda no focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra no foco */
+  }
+  
+  .formulario-inscricao .btn-primary {
+    background-color: var(--cor1); /* Cor de fundo do botão */
+    border-color: var(--cor1); /* Cor da borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 12px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario-inscricao .btn-primary:hover {
+    background-color: var(--cor1); /* Cor do botão ao passar o mouse */
+    border-color: #0056b3; /* Cor da borda ao passar o mouse */
+  }
+  
+  .formulario-inscricao .col-md-6, 
+  .formulario-inscricao .col-12 {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .formulario-inscricao h2 {
+      font-size: 1.5rem; /* Tamanho do título em dispositivos móveis */
+    }
+    
+    .formulario-inscricao .form-label {
+      font-size: 1rem; /* Tamanho da label em dispositivos móveis */
+    }
+    
+    .formulario-inscricao .form-control, 
+    .formulario-inscricao .form-select {
+      padding: 10px 15px; /* Ajuste do padding nos campos em dispositivos móveis */
+    }
+  
+    .formulario-inscricao .btn-primary {
+      font-size: 1rem; /* Tamanho do botão em dispositivos móveis */
+    }
+  }
+  
+
+footer {
+    background-color: var(--cor1) !important; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+}
+  
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+  
+footer a:hover {
+    color: #007bff; /* Azul claro no hover */
+}
+  
+footer i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+  
+footer i:hover {
+    transform: scale(1.2);
+}
+  
+footer .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+footer .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #212529; /* Cor do texto no hover */
+}
+  
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center; /* Texto centralizado para dispositivos menores */
+}
+  
+footer .col-md-4 {
+    text-align: left; /* Alinha à esquerda em telas maiores */
+}
+  
+@media (max-width: 768px) {
+    footer .col-md-4 {
+      text-align: center; /* Centraliza o texto em dispositivos menores */
+      margin-bottom: 20px; /* Espaço entre as seções no mobile */
+    }
+}
+  
