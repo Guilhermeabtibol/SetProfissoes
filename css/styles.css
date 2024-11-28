@@ -390,4 +390,31 @@ footer .col-md-4 {
       margin-bottom: 20px; /* Espaço entre as seções no mobile */
     }
 }
+
+/* Estilo do botão de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
   
