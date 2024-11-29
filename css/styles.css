@@ -104,21 +104,32 @@ body {
     opacity: 0.9;
 }
 
+/* Hero Section */
 .hero {
-    height: 80vh;
-    background: url(/assets/biblioteca2.jpg) no-repeat center center/cover;
-    color: white;
+  height: 100vh;
+  background: url('/assets/biblioteca2.jpg') no-repeat center center;
+  background-size: cover; /* Ajusta o tamanho para cobrir toda a área */
+  color: white;
+  display: flex; /* Centraliza o conteúdo vertical e horizontalmente */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Alinha o texto no centro */
+}
 
-}
+/* Custom Button */
 .btn-custom {
-    background-color: #a6140c !important;
-    color: #ffffff !important;
-    border: 2px solid #ffffff;
-    transition: all 0.3s ease;
+  background-color: #a6140c !important; /* Cor de fundo personalizada */
+  color: #ffffff !important; /* Texto branco */
+  border: 2px solid #ffffff; /* Borda branca */
+  border-radius: 5px; /* Borda arredondada */
+  padding: 0.5rem 1.5rem; /* Espaçamento interno */
+  transition: all 0.3s ease; /* Transição suave */
 }
+
 .btn-custom:hover {
-    background-color: #ffffff;
-    color: black !important;
+  background-color: #ffffff !important; /* Cor de fundo branca no hover */
+  color: #000000 !important; /* Texto preto no hover */
+  border-color: #000000; /* Borda preta no hover */
 }
 
 /* Estilo para a seção "Sobre Nós" */
@@ -214,59 +225,76 @@ body {
     }
   }
   
-  /* Cursos Section */
+/* Cursos Section */
 .cursos {
-    padding: 50px 0;
-    background-color: var(--cor1) !important;
-}
-  
-.cursos h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 30px;
-}
-  
-.cursos .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-  
-.cursos .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-  
-.cursos .card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-}
-  
-.cursos .card-title {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-  
-.cursos .card-text {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 20px;
+  padding: 3rem 0;
+  background-color: var(--cor1) !important;
 }
 
-.cursos .btn-primary {
-    background-color: var(--cor1);
-    border-color: #007bff;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+.cursos h2 {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
 }
-  
-.cursos .btn-primary:hover {
-    background-color: var(--cor1);
-    border-color: #0056b3;
+
+/* Estilização dos cartões no carrossel */
+.carousel .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
 }
+
+.carousel .card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.carousel .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.carousel .card-text {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.carousel .btn-primary {
+  background-color: var(--cor1);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel .btn-primary:hover {
+  background-color: black;
+}
+
+/* Indicadores personalizados */
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3;
+}
+
+/* Controles do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+  width: 30px;
+  height: 30px;
+}
+
 
 /* Seção do formulário */
 .formulario-inscricao {

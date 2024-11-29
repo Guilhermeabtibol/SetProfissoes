@@ -11,6 +11,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- AOS (Animate on Scroll) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Link para o Animate.css (via CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 
 </head>
 <body> <!-- Navbar -->
@@ -132,48 +135,75 @@
     </div>
   </section>
 
-
-  <!-- Cursos Section -->
+<!-- Cursos Section -->
 <section class="cursos py-5" style="background-color: #f8f9fa;">
-    <div class="container text-center">
-      <h2 class="mb-5">Nossos Cursos</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card shadow border-0">
-            <img src="assets/ingles.jpg" class="card-img-top" alt="Curso de Desenvolvimento Web">
+  <div class="container text-center">
+    <h2 class="mb-5">Nossos Cursos</h2>
+
+    <!-- Carousel -->
+    <div id="cursosCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#cursosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#cursosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#cursosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="card shadow border-0 mx-auto" style="max-width: 800px;">
+            <img src="assets/ingles.jpg" class="card-img-top" alt="Curso de Idiomas">
             <div class="card-body">
               <h5 class="card-title">Cursos de Idiomas</h5>
               <p class="card-text">A SetProfissões oferece aos seus alunos cursos de idiomas, proporcionando uma imersão completa em diversos idiomas para abrir novas portas no mercado global. Com metodologias dinâmicas e práticas, nossos cursos têm como objetivo desenvolver fluência e confiança, tornando o domínio de um novo idioma um grande diferencial competitivo na sua trajetória profissional.</p>
-              <a href="#" class="btn btn-primary">Saiba Mais</a>
+              <a href="#formulario" class="btn btn-primary">Saiba Mais</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card shadow border-0">
-            <img src="assets/informatica.jpg" class="card-img-top" alt="Curso de Data Science">
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="card shadow border-0 mx-auto" style="max-width: 800px;">
+            <img src="assets/informatica.jpg" class="card-img-top" alt="Informática Avançada">
             <div class="card-body">
               <h5 class="card-title">Informática Avançada</h5>
               <p class="card-text">A SetProfissões oferece o curso de Informática Avançada, que capacita os alunos a dominar ferramentas e técnicas de alta performance no uso de softwares e aplicativos essenciais para o mercado de trabalho. O curso é voltado para quem deseja se destacar em áreas como programação, design gráfico, análise de dados e gestão de redes, proporcionando habilidades que atendem às exigências mais desafiadoras do setor tecnológico.</p>
-              <a href="#" class="btn btn-primary">Saiba Mais</a>
+              <a href="#formulario" class="btn btn-primary">Saiba Mais</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card shadow border-0">
-            <img src="assets/inteligencia artificial.jpg" class="card-img-top" alt="Curso de E-commerce">
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="card shadow border-0 mx-auto" style="max-width: 800px;">
+            <img src="assets/inteligencia artificial.jpg" class="card-img-top" alt="Inteligência Artificial">
             <div class="card-body">
               <h5 class="card-title">Inteligência Artificial</h5>
               <p class="card-text">O curso de Inteligência Artificial da SetProfissões oferece uma imersão profunda nas tecnologias mais inovadoras que estão transformando o mercado. Os alunos aprenderão desde os conceitos básicos até as técnicas mais avançadas, como aprendizado de máquina, redes neurais, processamento de linguagem natural e visão computacional. Ao concluir o curso, os participantes estarão preparados para desenvolver soluções de IA em diversas áreas, como automação, análise preditiva e inteligência de negócios, tornando-se profissionais essenciais no futuro digital.</p>
-              <a href="#" class="btn btn-primary">Saiba Mais</a>
+              <a href="#formulario" class="btn btn-primary">Saiba Mais</a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#cursosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next " type="button" data-bs-target="#cursosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Seção "Formulário de Inscrição" -->
-<section class="formulario-inscricao py-5" style="background-color: #f4f4f4;">
+<section class="formulario-inscricao py-5" style="background-color: #f4f4f4;" id="formulario">
     <div class="container">
       <h2 class="text-center mb-4">Ficou interessado? Preencha o formulário</h2>
       <form action="#" method="POST">
@@ -206,7 +236,7 @@
     </div>
   </section>
 
-  <footer class="bg-dark text-white py-5">
+  <footer class=" text-white py-5">
     <div class="container">
       <div class="row text-center text-md-start align-items-center">
         <!-- Redes Sociais -->
@@ -259,6 +289,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
  
 </body>
 </html>
