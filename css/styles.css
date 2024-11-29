@@ -229,6 +229,7 @@ body {
 .cursos {
   padding: 3rem 0;
   background-color: var(--cor1) !important;
+  height: 800px;
 }
 
 .cursos h2 {
@@ -242,14 +243,16 @@ body {
 .carousel .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 8px;
+  width: 70%;
+  height: 650px;
 }
 
 .carousel .card img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  max-height: 300px;
+  width: 100%;
+  height: 420px;
   object-fit: cover;
+  margin-right: 10%;
+  
 }
 
 .carousel .card-title {
@@ -295,6 +298,17 @@ body {
   height: 30px;
 }
 
+@media (max-width: 768px) {
+  .cursos {
+    min-height: 600px; /* Para telas menores, como tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .cursos {
+    min-height: 500px; /* Para telas muito pequenas, como celulares */
+  }
+}
 
 /* Seção do formulário */
 .formulario-inscricao {
